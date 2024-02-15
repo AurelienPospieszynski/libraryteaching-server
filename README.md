@@ -8,11 +8,11 @@ The main purpose of this is to teach some basics about coding and managing datas
 
 ## Technos
 
-- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine. [Node.js](https://nodejs.org/en/docs/)
-- **Fastify**: A fast and low overhead web framework for Node.js. [Fastify](https://www.fastify.io/docs/latest/)
-- **PostgreSQL**: An open-source relational database. [PostgreSQL](https://www.postgresql.org/docs/)
-- **pg (node-postgres)**: A collection of Node.js modules for interfacing with your PostgreSQL database. [pg](https://node-postgres.com/)
-- **Winston**: A logger for just about everything in Node.js. [Winston](https://github.com/winstonjs/winston)
+- [Node.js](https://nodejs.org/en/docs/): A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [Fastify](https://www.fastify.io/docs/latest/): A fast and low overhead web framework for Node.js.
+- [PostgreSQL](https://www.postgresql.org/docs/): An open-source relational database.
+- [pg](https://node-postgres.com/): A collection of Node.js modules for interfacing with your PostgreSQL database.
+- [Winston](https://github.com/winstonjs/winston) A logger for just about everything in Node.js.
 
 ## Getting Started
 
