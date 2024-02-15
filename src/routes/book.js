@@ -14,5 +14,11 @@ async function bookRoutes(fastify, options) {
     return books;
   });
 
+  fastify.get('/books/:id', async (request, reply) => {
+    const { id } = request.params;
+    const book = await bookService.getBookById(id);
+    return book;
+  });
+
   // Other routes...
 }

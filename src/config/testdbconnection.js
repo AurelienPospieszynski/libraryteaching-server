@@ -3,6 +3,7 @@ const db = require('./db');
 /**
  * Tests the database connection by executing a query to retrieve all books from the public.books table.
  * If the query is successful, the books are logged to the console.
+ *
  * @returns {Promise<void>} A promise that resolves when the test is completed.
  */
 async function testDB() {
