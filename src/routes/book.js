@@ -22,3 +22,5 @@ async function bookRoutes(fastify, options) {
 
   // Other routes...
 }
+
+module.exports = bookRoutes;

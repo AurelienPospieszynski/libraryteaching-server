@@ -3,7 +3,7 @@ const fastify = require('fastify')({ logger: true });
 
 // Register routes
 fastify.register(require('./routes/route'));
-fastify.register(require('./routes/books'));
+fastify.register(require('./routes/book'));
 
 // Run the server!
 const start = async () => {
