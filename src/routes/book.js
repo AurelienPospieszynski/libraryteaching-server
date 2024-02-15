@@ -20,6 +20,30 @@ async function bookRoutes(fastify, options) {
     return book;
   });
 
+  fastify.get('/books/author/:authorID', async (request, reply) => {
+    const { authorID } = request.params;
+    const books = await bookService.getBooksByAuthor(authorID);
+    return books;
+  });
+
+  fastify.get('/books/category/:categoryID', async (request, reply) => {
+    const { categoryID } = request.params;
+    const books = await bookService.getBooksByCategory(categoryID);
+    return books;
+  });
+
+  fastify.post('/book', async (request, reply) => {
+    const book = request.body;
+    const newBook = await bookService.addBook(book);
+    return newBook;
+  });
+
+  fastify.delete('/book/:id', async (request, reply) => {
+    const { id } = request.params;
+    const deletedBook = await bookService.deleteBook(id);
+    return deletedBook;
+  });
+
   // Other routes...
 }
 

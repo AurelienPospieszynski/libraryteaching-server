@@ -66,7 +66,7 @@ async function deleteBook(id) {
  * @returns {Promise<Array>} - A promise that resolves to an array of books.
  */
 async function getBooksByAuthor(authorID) {
-  const res = await db.query('SELECT * FROM Books WHERE authorID = $1', [
+  const res = await db.query('SELECT * FROM Books WHERE authorid = $1', [
     authorID,
   ]);
   return res.rows;
@@ -79,7 +79,7 @@ async function getBooksByAuthor(authorID) {
  * @returns {Promise<Array>} - A promise that resolves to an array of books.
  */
 async function getBooksByCategory(categoryID) {
-  const res = await db.query('SELECT * FROM Books WHERE categoryID = $1', [
+  const res = await db.query('SELECT * FROM Books WHERE categoryid = $1', [
     categoryID,
   ]);
   return res.rows;
