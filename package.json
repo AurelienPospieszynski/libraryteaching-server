@@ -1,0 +1,16 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Server part of the libraryteaching app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.26.1",
+    "pg": "^8.11.3"
+  }
+}
