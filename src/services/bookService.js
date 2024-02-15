@@ -19,7 +19,7 @@ async function getAllBooks() {
  * @returns {Promise<Object>} A promise that resolves to the book object.
  */
 async function getBookById(id) {
-  const res = await db.query('SELECT * FROM Books WHERE id = $1', [id]);
+  const res = await db.query('SELECT * FROM Books WHERE bookid = $1', [id]);
   return res.rows[0];
 }
 
