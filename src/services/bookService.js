@@ -59,9 +59,49 @@ async function deleteBook(id) {
   return res.rows[0];
 }
 
+/**
+ * Retrieves books by author ID.
+ *
+ * @param {number} authorID - The ID of the author.
+ * @returns {Promise<Array>} - A promise that resolves to an array of books.
+ */
+async function getBooksByAuthor(authorID) {
+  const res = await db.query('SELECT * FROM Books WHERE authorID = $1', [
+    authorID,
+  ]);
+  return res.rows;
+}
+
+/**
+ * Retrieves books by category ID.
+ *
+ * @param {number} categoryID - The ID of the category.
+ * @returns {Promise<Array>} - A promise that resolves to an array of books.
+ */
+async function getBooksByCategory(categoryID) {
+  const res = await db.query('SELECT * FROM Books WHERE categoryID = $1', [
+    categoryID,
+  ]);
+  return res.rows;
+}
+
+/**
+ * Retrieves books from the database based on the provided title.
+ *
+ * @param {string} title - The title of the books to retrieve.
+ * @returns {Promise<Array>} - A promise that resolves to an array of book objects.
+ */
+async function getBooksByTitle(title) {
+  const res = await db.query('SELECT * FROM Books WHERE title = $1', [title]);
+  return res.rows;
+}
+
 module.exports = {
   getAllBooks: errorHandler(getAllBooks),
   getBookById: errorHandler(getBookById),
   addBook: errorHandler(addBook),
   deleteBook: errorHandler(deleteBook),
+  getBooksByAuthor: errorHandler(getBooksByAuthor),
+  getBooksByCategory: errorHandler(getBooksByCategory),
+  getBooksByTitle: errorHandler(getBooksByTitle),
 };
