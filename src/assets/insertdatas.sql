@@ -12,6 +12,10 @@ INSERT INTO Authors (Name, Bio) VALUES
 ('Jane Austen', 'Known for Pride and Prejudice, Sense and Sensibility.'),
 ('Charles Dickens', 'Famous for A Tale of Two Cities, Oliver Twist.'),
 ('Ernest Hemingway', 'Known for The Old Man and the Sea.');
+('J.R.R. Tolkien', 'Author of The Lord of the Rings series.'),
+('George R.R. Martin', 'Known for A Song of Ice and Fire series.'),
+('Patrick Rothfuss', 'Known for The Kingkiller Chronicle series.'),
+('Brandon Sanderson', 'Known for the Mistborn series and The Stormlight Archive.');
 
 -- Insert Categories
 INSERT INTO Categories (Name, Description) VALUES
@@ -29,6 +33,12 @@ INSERT INTO Categories (Name, Description) VALUES
 -- Insert Books
 INSERT INTO Books (Title, AuthorID, CategoryID, ISBN, PublicationYear) VALUES
 ('Harry Potter and the Philosopher''s Stone', 1, 6, '9780747532743', 1997),
+('Harry Potter and the Chamber of Secrets', 1, 6, '9781408855669', 1998),
+('Harry Potter and the Prisoner of Azkaban', 1, 6, '9781408855676', 1999),
+('Harry Potter and the Goblet of Fire', 1, 6, '9781408855683', 2000),
+('Harry Potter and the Order of the Phoenix', 1, 6, '9781408855690', 2003),
+('Harry Potter and the Half-Blood Prince', 1, 6, '9781408855706', 2005),
+('Harry Potter and the Deathly Hallows', 1, 6, '9781408855713', 2007);
 ('1984', 2, 4, '9780451524935', 1949),
 ('War and Peace', 3, 5, '9781400079988', 1869),
 ('Murder on the Orient Express', 4, 3, '9780007119318', 1934),
@@ -38,6 +48,12 @@ INSERT INTO Books (Title, AuthorID, CategoryID, ISBN, PublicationYear) VALUES
 ('Pride and Prejudice', 8, 9, '9780141439518', 1813),
 ('Oliver Twist', 9, 1, '9780141439747', 1838),
 ('The Old Man and the Sea', 10, 2, '9780684801223', 1952);
+-- Additional books in the Fantasy category (by various authors)
+('The Hobbit', 11, 6, '9780547928227', 1937), -- J.R.R. Tolkien
+('The Fellowship of the Ring', 11, 6, '9780547928210', 1954), -- J.R.R. Tolkien
+('A Game of Thrones', 12, 6, '9780553593716', 1996), -- George R.R. Martin
+('The Name of the Wind', 13, 6, '9780756404741', 2007), -- Patrick Rothfuss
+('Mistborn: The Final Empire', 14, 6, '9780765311788', 2006); -- Brandon Sanderson
 
 -- Insert Users
 INSERT INTO Users (Name, Email, MembershipDate) VALUES
