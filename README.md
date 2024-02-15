@@ -17,13 +17,16 @@ The main purpose of this is to teach some basics about coding and managing datas
 ## Getting Started
 
 1. Clone the repository:
+   `git clone [urlProject]`
 2. Install dependencies:
+   `npm install`
 3. Set up the database:
 
 - Make sure PostgreSQL is installed and running.
 - Create a database and configure it in `config/db.js`.
 
-4. Start the server:
+4. Start the server: ( Don't forget to be in /src)
+   `node server.js`
 
 ## Features
 
