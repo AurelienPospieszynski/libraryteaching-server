@@ -28,21 +28,21 @@ async function getBookById(id) {
  *
  * @param {Object} book - The book object to be added.
  * @param {string} book.title - The title of the book.
- * @param {number} book.authorID - The ID of the author of the book.
- * @param {number} book.categoryID - The ID of the category of the book.
+ * @param {number} book.authorid - The ID of the author of the book.
+ * @param {number} book.categoryid - The ID of the category of the book.
  * @param {string} book.isbn - The ISBN of the book.
- * @param {number} book.publicationYear - The publication year of the book.
+ * @param {number} book.publicationyear - The publication year of the book.
  * @returns {Object} - The inserted book object.
  */
 async function addBook(book) {
   const res = await db.query(
-    'INSERT INTO Books (Title, AuthorID, CategoryID, ISBN, PublicationYear) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+    'INSERT INTO Books (Title, authorid, categoryid, isbn, publicationyear) VALUES ($1, $2, $3, $4, $5) RETURNING *',
     [
       book.title,
-      book.authorID,
-      book.categoryID,
+      book.authorid,
+      book.categoryid,
       book.isbn,
-      book.publicationYear,
+      book.publicationyear,
     ]
   );
   return res.rows[0];

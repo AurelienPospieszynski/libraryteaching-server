@@ -20,7 +20,7 @@ async function getAllCategories() {
  */
 async function addCategory(categoryName, categoryDescription) {
   const res = await db.query(
-    'INSERT INTO Categories (Name, Description) VALUES ($1, $2) RETURNING *',
+    'INSERT INTO Categories (name, description) VALUES ($1, $2) RETURNING *',
     [categoryName, categoryDescription]
   );
   return res.rows[0];
@@ -33,7 +33,7 @@ async function addCategory(categoryName, categoryDescription) {
  * @returns {Promise<Object>} - A promise that resolves to the category object.
  */
 async function getCategoryById(categoryId) {
-  const res = await db.query('SELECT * FROM Categories WHERE CategoryID = $1', [
+  const res = await db.query('SELECT * FROM Categories WHERE categoryid = $1', [
     categoryId,
   ]);
   return res.rows[0];
@@ -49,7 +49,7 @@ async function getCategoryById(categoryId) {
  */
 async function updateCategory(categoryId, categoryName, categoryDescription) {
   const res = await db.query(
-    'UPDATE Categories SET Name = $2, Description = $3 WHERE CategoryID = $1 RETURNING *',
+    'UPDATE Categories SET name = $2, description = $3 WHERE categoryid = $1 RETURNING *',
     [categoryId, categoryName, categoryDescription]
   );
   return res.rows[0];
@@ -62,7 +62,7 @@ async function updateCategory(categoryId, categoryName, categoryDescription) {
  * @returns {Promise<boolean>} - A promise that resolves to true if a category was deleted, otherwise false.
  */
 async function deleteCategory(categoryId) {
-  const res = await db.query('DELETE FROM Categories WHERE CategoryID = $1', [
+  const res = await db.query('DELETE FROM Categories WHERE categoryid = $1', [
     categoryId,
   ]);
   return res.rowCount > 0; // Returns true if a category was deleted
