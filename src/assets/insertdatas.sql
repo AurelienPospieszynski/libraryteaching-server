@@ -33,12 +33,6 @@ INSERT INTO Categories (Name, Description) VALUES
 -- Insert Books
 INSERT INTO Books (Title, AuthorID, CategoryID, ISBN, PublicationYear) VALUES
 ('Harry Potter and the Philosopher''s Stone', 1, 6, '9780747532743', 1997),
-('Harry Potter and the Chamber of Secrets', 1, 6, '9781408855669', 1998),
-('Harry Potter and the Prisoner of Azkaban', 1, 6, '9781408855676', 1999),
-('Harry Potter and the Goblet of Fire', 1, 6, '9781408855683', 2000),
-('Harry Potter and the Order of the Phoenix', 1, 6, '9781408855690', 2003),
-('Harry Potter and the Half-Blood Prince', 1, 6, '9781408855706', 2005),
-('Harry Potter and the Deathly Hallows', 1, 6, '9781408855713', 2007);
 ('1984', 2, 4, '9780451524935', 1949),
 ('War and Peace', 3, 5, '9781400079988', 1869),
 ('Murder on the Orient Express', 4, 3, '9780007119318', 1934),
@@ -47,7 +41,13 @@ INSERT INTO Books (Title, AuthorID, CategoryID, ISBN, PublicationYear) VALUES
 ('The Adventures of Tom Sawyer', 7, 5, '9780486400778', 1876),
 ('Pride and Prejudice', 8, 9, '9780141439518', 1813),
 ('Oliver Twist', 9, 1, '9780141439747', 1838),
-('The Old Man and the Sea', 10, 2, '9780684801223', 1952);
+('The Old Man and the Sea', 10, 2, '9780684801223', 1952),
+('Harry Potter and the Chamber of Secrets', 1, 6, '9781408855669', 1998),
+('Harry Potter and the Prisoner of Azkaban', 1, 6, '9781408855676', 1999),
+('Harry Potter and the Goblet of Fire', 1, 6, '9781408855683', 2000),
+('Harry Potter and the Order of the Phoenix', 1, 6, '9781408855690', 2003),
+('Harry Potter and the Half-Blood Prince', 1, 6, '9781408855706', 2005),
+('Harry Potter and the Deathly Hallows', 1, 6, '9781408855713', 2007),
 -- Additional books in the Fantasy category (by various authors)
 ('The Hobbit', 11, 6, '9780547928227', 1937), -- J.R.R. Tolkien
 ('The Fellowship of the Ring', 11, 6, '9780547928210', 1954), -- J.R.R. Tolkien
@@ -79,4 +79,15 @@ INSERT INTO BorrowRecords (BookID, UserID, BorrowDate, ReturnDate) VALUES
 (7, 7, '2021-07-01', '2021-07-15'),
 (8, 8, '2021-08-01', '2021-08-15'),
 (9, 9, '2021-09-14', '2021-09-30'),
-(10, 10, '2021-10-05', '2021-10-20');
+(10, 10, '2021-10-05', '2021-10-20'),
+(11, 2, '2021-11-01', NULL), -- Book still borrowed
+(12, 3, '2021-11-05', NULL),
+(13, 4, '2021-11-10', NULL),
+(14, 5, '2021-11-15', NULL),
+(15, 6, '2021-11-20', NULL),
+(16, 7, '2021-11-25', NULL),
+(17, 8, '2021-12-01', NULL),
+(18, 9, '2021-12-05', NULL),
+(19, 10, '2021-12-10', NULL),
+(20, 1, '2021-12-15', NULL),
+(21, 2, '2021-12-20', NULL); 
