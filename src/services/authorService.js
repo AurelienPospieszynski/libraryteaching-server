@@ -20,7 +20,7 @@ async function getAllAuthors() {
  */
 async function addAuthor(authorName, authorBio) {
   const res = await db.query(
-    'INSERT INTO Authors (Name, Bio) VALUES ($1, $2 ) RETURNING *',
+    'INSERT INTO Authors (name, bio) VALUES ($1, $2 ) RETURNING *',
     [authorName, authorBio]
   );
   return res.rows[0];
@@ -33,7 +33,7 @@ async function addAuthor(authorName, authorBio) {
  * @returns {Promise<Object>} - A promise that resolves to the author object.
  */
 async function getAuthorById(authorId) {
-  const res = await db.query('SELECT * FROM Authors WHERE AuthorID = $1', [
+  const res = await db.query('SELECT * FROM Authors WHERE authorid = $1', [
     authorId,
   ]);
   return res.rows[0];

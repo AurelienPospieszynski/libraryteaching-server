@@ -5,6 +5,7 @@ const fastify = require('fastify')({ logger: true });
 fastify.register(require('./routes/route'));
 fastify.register(require('./routes/book'));
 fastify.register(require('./routes/category'));
+fastify.register(require('./routes/author'));
 
 // Run the server!
 const start = async () => {
