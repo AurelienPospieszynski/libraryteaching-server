@@ -28,6 +28,13 @@ The main purpose of this is to teach some basics about coding and managing datas
 4. Start the server: ( Don't forget to be in /src)
    `node server.js`
 
+## Client
+
+This project has as his client this repository :
+
+5. Clone the client repository :
+   `git clone`[libraryteaching-client](https://github.com/AurelienPospieszynski/libraryteaching-client)
+
 ## Features
 
 - CRUD operations for managing books, authors, and borrow records.
